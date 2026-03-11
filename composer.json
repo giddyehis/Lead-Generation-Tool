@@ -1,0 +1,49 @@
+{
+    "name": "lead-generator/lead-generation-system",
+    "description": "A professional PHP-based lead generation system for quality-focused lead collection",
+    "type": "project",
+    "keywords": ["leads", "business", "marketing", "scraping", "validation"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lead Generator",
+            "email": "info@leadgenerator.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "phpoffice/phpspreadsheet": "^1.29",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LeadGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LeadGenerator\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "post-install-cmd": [
+            "mkdir -p exports logs temp"
+        ],
+        "post-update-cmd": [
+            "mkdir -p exports logs temp"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 
